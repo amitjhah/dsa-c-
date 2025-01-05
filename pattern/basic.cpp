@@ -45,7 +45,7 @@ void decreasepattern(int row,int column){
 }
 void tranglepattern(int n ){
     for(int i =0;i<=n;i++){
-        for(int j =0;j<n-i-1;j++){
+        for(int j =0;j<=n-i-1;j++){
             std::cout<<" ";
         }
         
@@ -53,11 +53,25 @@ void tranglepattern(int n ){
             std::cout<<"*";
         }
        
-        for(int j =0;j<n-i-1;j++){
+        for(int j =0;j<=n-i-1;j++){
             std::cout<<" ";
         }
          std::cout<<"\n";
     }
+}
+void pattern11(int N)
+{
+      int start =1;
+      for(int i=0;i<N;i++){
+          if(i%2 ==0) start = 1;
+          else start = 0;
+          for(int j=0;j<=i;j++){
+             std:: cout<<start;
+              start = 1-start;
+          }
+      
+       std:: cout<<"\n";
+      }
 }
 
 void tranglereverse(int n ){
@@ -78,6 +92,7 @@ void tranglereverse(int n ){
 }
 
 int main(){
+    pattern11(5);
    decreasepattern(4,5);
     number2Pattern(6);
     secondPattern(4,5);
